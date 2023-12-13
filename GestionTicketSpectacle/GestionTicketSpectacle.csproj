@@ -56,10 +56,19 @@
     <Compile Include="App\Forms\ConnexionForm.Designer.cs">
       <DependentUpon>ConnexionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\Forms\InscriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Forms\InscriptionForm.Designer.cs">
+      <DependentUpon>InscriptionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="App\Forms\ConnexionForm.resx">
       <DependentUpon>ConnexionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Forms\InscriptionForm.resx">
+      <DependentUpon>InscriptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -84,5 +94,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
