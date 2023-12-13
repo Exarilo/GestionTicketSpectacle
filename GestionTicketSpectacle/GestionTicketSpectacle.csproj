@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Classes\Billet.cs" />
+    <Compile Include="App\Classes\GestionnaireBillets.cs" />
+    <Compile Include="App\Classes\Spectacle.cs" />
+    <Compile Include="App\Classes\Utilisateur.cs" />
     <Compile Include="App\Forms\ConnexionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,8 +83,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App\Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
