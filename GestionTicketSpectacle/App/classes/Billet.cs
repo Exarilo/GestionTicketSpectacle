@@ -10,9 +10,9 @@ namespace GestionTicketSpectacle.App.Classes
     {
         private int IDSpectacle {  get; set; }
         private int IDUtilisateur { get; set; }
-        private string StatutReservation { get; set; }
+        private bool StatutReservation { get; set; }
 
-        public Billet(int iDSpectacle, int iDUtilisateur, string statutReservation)
+        public Billet(int iDSpectacle, int iDUtilisateur, bool statutReservation)
         {
             IDSpectacle = iDSpectacle;
             IDUtilisateur = iDUtilisateur;

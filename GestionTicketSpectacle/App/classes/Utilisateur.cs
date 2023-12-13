@@ -11,13 +11,15 @@ namespace GestionTicketSpectacle.App.Classes
     {
         private int ID {  get; set; }
         private string Nom { get; set; }
+        private string Mdp { get; set; }
         private List<Billet> Reservations { get; set; }
 
-        public Utilisateur(int iD, string nom, List<Billet> reservations)
+        public Utilisateur(int iD, string nom, List<Billet> reservations, string mdp)
         {
             ID = iD;
             Nom = nom;
             Reservations = reservations;
+            Mdp = mdp;
         }
     }
 }

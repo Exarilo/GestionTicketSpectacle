@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -62,9 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\Classes\Billet.cs" />
+    <Compile Include="App\Classes\ConnexionDB.cs" />
     <Compile Include="App\Classes\GestionnaireBillets.cs" />
     <Compile Include="App\Classes\Spectacle.cs" />
     <Compile Include="App\Classes\Utilisateur.cs" />
+    <Compile Include="App\DAO\UtilisateurDAO.cs" />
     <Compile Include="App\Forms\ConnexionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +121,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
