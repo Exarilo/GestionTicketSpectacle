@@ -12,18 +12,14 @@ namespace GestionTicketSpectacle.App
         public static async Task HandleEmptyField(string fieldText, PictureBox pictureBox)
         {
             if (string.IsNullOrWhiteSpace(fieldText))
-            {
                 await BlinkIcon(pictureBox);
-            }
             else
-            {
                 pictureBox.Visible = false;
-            }
         }
 
         public static async Task BlinkIcon(PictureBox pictureBox)
         {
-            int numberOfBlinks = 6;
+            int numberOfBlinks = 5;
             for (int i = 0; i < numberOfBlinks; i++)
             {
                 pictureBox.Visible = !pictureBox.Visible;

@@ -32,8 +32,8 @@ namespace GestionTicketSpectacle
 
         private async void btValidate_Click(object sender, EventArgs e)
         {
-            //await Tools.HandleEmptyField(tbUsername.Text, pbUsernameError);
-            //await Tools.HandleEmptyField(tbPassword.Text, pbPasswordError);
+            await Tools.HandleEmptyField(tbUsername.Text, pbUsernameError);
+            await Tools.HandleEmptyField(tbPassword.Text, pbPasswordError);
             ReservationForm mainForm = new ReservationForm();
     
             mainForm.Show();

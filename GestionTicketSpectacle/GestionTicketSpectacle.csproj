@@ -130,7 +130,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\usericon.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error.png" />
   </ItemGroup>
