@@ -16,5 +16,12 @@ namespace GestionTicketSpectacle.App.Forms
         {
             InitializeComponent();
         }
+
+        private async void btValidate_Click(object sender, EventArgs e)
+        {
+            await Tools.HandleEmptyField(tbUsername.Text, pbUsernameError);
+            await Tools.HandleEmptyField(tbPassword.Text, pbPasswordError);
+            await Tools.HandleEmptyField(tbConfirmPassword.Text, pbConfirmPasswordError);
+        }
     }
 }

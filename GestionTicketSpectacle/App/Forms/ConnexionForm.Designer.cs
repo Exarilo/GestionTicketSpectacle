@@ -130,7 +130,7 @@
             this.Controls.Add(this.lbUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ConnexionForm";
-            this.Text = "Form1";
+            this.Text = "Connexion";
             ((System.ComponentModel.ISupportInitialize)(this.pbPasswordError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsernameError)).EndInit();
             this.ResumeLayout(false);

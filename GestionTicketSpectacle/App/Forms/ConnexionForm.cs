@@ -1,4 +1,5 @@
-﻿using GestionTicketSpectacle.App.Forms;
+﻿using GestionTicketSpectacle.App;
+using GestionTicketSpectacle.App.Forms;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,31 +32,8 @@ namespace GestionTicketSpectacle
 
         private async void btValidate_Click(object sender, EventArgs e)
         {
-            await HandleEmptyField(tbUsername.Text, pbUsernameError);
-            await HandleEmptyField(tbPassword.Text, pbPasswordError);
-        }
-
-        private async Task HandleEmptyField(string fieldText, PictureBox pictureBox)
-        {
-            if (string.IsNullOrWhiteSpace(fieldText))
-            {
-                await BlinkIcon(pictureBox);
-            }
-            else
-            {
-                pictureBox.Visible = false;
-            }
-        }
-
-        private async Task BlinkIcon(PictureBox pictureBox)
-        {
-            int numberOfBlinks = 6; 
-            for (int i = 0; i < numberOfBlinks; i++)
-            {
-                pictureBox.Visible = !pictureBox.Visible;
-                await Task.Delay(150); 
-            }
-            pictureBox.Visible = true; 
+            await Tools.HandleEmptyField(tbUsername.Text, pbUsernameError);
+            await Tools.HandleEmptyField(tbPassword.Text, pbPasswordError);
         }
     }
 }
