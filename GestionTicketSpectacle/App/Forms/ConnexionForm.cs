@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionTicketSpectacle
 {
-    public partial class Form1 : Form
+    public partial class ConnexionForm : Form
     {
-        public Form1()
+        public ConnexionForm()
         {
             InitializeComponent();
         }

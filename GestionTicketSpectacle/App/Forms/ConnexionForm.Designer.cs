@@ -1,6 +1,6 @@
 ﻿namespace GestionTicketSpectacle
 {
-    partial class Form1
+    partial class ConnexionForm
     {
         /// <summary>
         /// Required designer variable.
