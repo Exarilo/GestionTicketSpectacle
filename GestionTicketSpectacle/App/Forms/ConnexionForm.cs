@@ -1,4 +1,5 @@
 ﻿using GestionTicketSpectacle.App;
+using GestionTicketSpectacle.App.DAO;
 using GestionTicketSpectacle.App.Forms;
 using System;
 using System.Threading.Tasks;
@@ -34,10 +35,21 @@ namespace GestionTicketSpectacle
         {
             await Tools.HandleEmptyField(tbUsername.Text, pbUsernameError);
             await Tools.HandleEmptyField(tbPassword.Text, pbPasswordError);
-            ReservationForm mainForm = new ReservationForm();
-    
-            mainForm.Show();
-            this.Hide();
+
+            UtilisateurDAO utilisateurDAO = new UtilisateurDAO();
+            var test = utilisateurDAO.ConnexionUser(tbUsername.Text, tbPassword.Text);
+            //MessageBox.Show(utilisateurDAO.ConnexionUser(tbUsername.Text , tbPassword.Text));
+            if (utilisateurDAO.ConnexionUser(tbUsername.Text, tbPassword.Text)){
+                ReservationForm mainForm = new ReservationForm();
+
+                mainForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Erreur de connexion verifier vos identifiants","Erreur",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
         }
     }
 }

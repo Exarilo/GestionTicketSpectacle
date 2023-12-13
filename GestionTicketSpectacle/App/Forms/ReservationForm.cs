@@ -16,5 +16,12 @@ namespace GestionTicketSpectacle.App.Forms
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ConnexionForm mainForm = new ConnexionForm();
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }
