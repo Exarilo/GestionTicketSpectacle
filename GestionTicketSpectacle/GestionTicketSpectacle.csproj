@@ -67,7 +67,7 @@
   <ItemGroup>
     <Compile Include="App\Api Rest\APIManager.cs" />
     <Compile Include="App\Classes\Billet.cs" />
-    <Compile Include="App\Classes\ConnexionDB.cs" />
+    <Compile Include="App\DAO\ConnexionDB.cs" />
     <Compile Include="App\Classes\GestionnaireBillets.cs" />
     <Compile Include="App\Classes\Spectacle.cs" />
     <Compile Include="App\Classes\Utilisateur.cs" />
