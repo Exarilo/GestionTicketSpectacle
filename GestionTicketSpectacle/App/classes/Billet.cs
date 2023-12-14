@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GestionTicketSpectacle.App.Classes
+﻿namespace GestionTicketSpectacle.App.Classes
 {
-    internal class Billet
+    public class Billet
     {
         private int IDSpectacle {  get; set; }
         private int IDUtilisateur { get; set; }

@@ -1,16 +1,10 @@
 ﻿using GestionTicketSpectacle.App.Classes;
 using System;
-using System.Collections.Generic;
-using System.Data.Common;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GestionTicketSpectacle.App.DAO
 {
-    internal class UtilisateurDAO
+    public class UtilisateurDAO
     {
         public UtilisateurDAO() { }
 

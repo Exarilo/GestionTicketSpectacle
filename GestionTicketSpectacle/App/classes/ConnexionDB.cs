@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace GestionTicketSpectacle.App.Classes
 {
-    internal class ConnexionDB
+    public class ConnexionDB
     {
         private readonly string connectionString;
         private SqlConnection connection;

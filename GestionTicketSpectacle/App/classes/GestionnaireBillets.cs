@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestionTicketSpectacle.App.Classes
 {
-    internal class GestionnaireBillets
+    public class GestionnaireBillets
     {
         public GestionnaireBillets() { }
     }
