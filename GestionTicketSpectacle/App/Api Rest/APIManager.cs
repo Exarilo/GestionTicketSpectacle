@@ -32,6 +32,7 @@ namespace GestionTicketSpectacle.App.Api_Rest
                     {
                         spectacles.Add(new Spectacle
                         (
+                            typeSpectable:TypeSpectable.Theatre,
                             iD : int.Parse(value[0]?.ToString()),
                             titre : value[1]?.ToString(),
                             date : DateTime.Parse(value[3]?.ToString()),

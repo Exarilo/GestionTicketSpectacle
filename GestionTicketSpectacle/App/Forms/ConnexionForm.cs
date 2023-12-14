@@ -33,9 +33,11 @@ namespace GestionTicketSpectacle
 
         private async void btValidate_Click(object sender, EventArgs e)
         {
-            ReservationForm mainForm = new ReservationForm();
+            ReservationForm2 mainForm = new ReservationForm2();
             mainForm.Show();
             this.Hide();
+            /*
+          
             await Tools.HandleEmptyField(tbUsername.Text, pbUsernameError);
             await Tools.HandleEmptyField(tbPassword.Text, pbPasswordError);
 
@@ -49,6 +51,7 @@ namespace GestionTicketSpectacle
             {
                 MessageBox.Show(Constant.MessageBoxIncorrectLogin, Constant.MessageBoxErrorTitle, MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            */
 
         }
     }

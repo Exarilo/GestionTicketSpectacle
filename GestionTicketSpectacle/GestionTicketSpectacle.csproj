@@ -67,9 +67,11 @@
   <ItemGroup>
     <Compile Include="App\Api Rest\APIManager.cs" />
     <Compile Include="App\Classes\Billet.cs" />
+    <Compile Include="App\Classes\Spectacles\SpectacleExtension.cs" />
+    <Compile Include="App\Classes\Spectacles\TypeSpectacle.cs" />
     <Compile Include="App\DAO\ConnexionDB.cs" />
     <Compile Include="App\Classes\GestionnaireBillets.cs" />
-    <Compile Include="App\Classes\Spectacle.cs" />
+    <Compile Include="App\Classes\Spectacles\Spectacle.cs" />
     <Compile Include="App\Classes\Utilisateur.cs" />
     <Compile Include="App\Constant.cs" />
     <Compile Include="App\DAO\UtilisateurDAO.cs" />
@@ -91,6 +93,12 @@
     <Compile Include="App\Forms\ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\Forms\ReservationForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Forms\ReservationForm2.Designer.cs">
+      <DependentUpon>ReservationForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Tools.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="App\Forms\ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Forms\ReservationForm2.resx">
+      <DependentUpon>ReservationForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,8 +138,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
@@ -146,6 +158,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theatre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\concert.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
