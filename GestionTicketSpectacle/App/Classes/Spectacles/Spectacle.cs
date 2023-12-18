@@ -11,8 +11,9 @@ namespace GestionTicketSpectacle.App.Classes
         public DateTime Date { get; set; }
         public string Lieu {  get; set; }
         public int NbPlace { get; set; }
+        public int Price { get; set; }
 
-        public Spectacle(int iD, TypeSpectable typeSpectable ,string titre, DateTime date, string lieu, int nbPlace)
+        public Spectacle(int iD, TypeSpectable typeSpectable ,string titre, DateTime date,int price, string lieu, int nbPlace)
         {
             this.ID = iD;
             this.Icon = typeSpectable.GetAssociatedBitmap();
@@ -20,6 +21,7 @@ namespace GestionTicketSpectacle.App.Classes
             this.Date = date;
             this.Lieu = lieu;
             this.NbPlace = nbPlace;
+            this.Price = price;
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using GestionTicketSpectacle.App.Classes;
 using System;
+using System.Collections.ObjectModel;
+using System.Data.Common;
 using System.Data.SqlClient;
 
 namespace GestionTicketSpectacle.App.DAO
@@ -13,31 +15,30 @@ namespace GestionTicketSpectacle.App.DAO
             try
             {
                 ConnexionDB db = new ConnexionDB();
-                using (SqlConnection connection = db.OpenConnection())
+
+                if (db.Connection == null)
                 {
-                    if (connection == null)
+                    return false;
+                }
+
+                string query = "SELECT COUNT(*) FROM Users WHERE Nom = @Nom AND Mdp = @Mdp";
+                using (SqlCommand command = new SqlCommand(query, db.Connection))
+                {
+                    command.Parameters.AddWithValue("@Nom", nom);
+                    command.Parameters.AddWithValue("@Mdp", mdp);
+
+                    int userCount = (int)command.ExecuteScalar();
+
+                    if (userCount > 0)
                     {
-                        //return false;
+                        return true;
                     }
-
-                    string query = "SELECT COUNT(*) FROM Users WHERE Nom = @Nom AND Mdp = @Mdp";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    else
                     {
-                        command.Parameters.AddWithValue("@Nom", nom);
-                        command.Parameters.AddWithValue("@Mdp", mdp);
-
-                        int userCount = (int)command.ExecuteScalar();
-
-                        if(userCount > 0)
-                        {
-                            return true;
-                        }
-                        else 
-                        { 
-                            return false; 
-                        }
+                        return false;
                     }
                 }
+
             }
             catch (Exception ex)
             {

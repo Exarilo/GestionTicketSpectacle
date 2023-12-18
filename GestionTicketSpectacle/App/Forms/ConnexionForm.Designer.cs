@@ -36,6 +36,7 @@
             this.btValidate = new System.Windows.Forms.Button();
             this.pbPasswordError = new System.Windows.Forms.PictureBox();
             this.pbUsernameError = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbPasswordError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsernameError)).BeginInit();
             this.SuspendLayout();
@@ -115,11 +116,22 @@
             this.pbUsernameError.TabStop = false;
             this.pbUsernameError.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(420, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "user \"admin\" mdp \"admin\" pour passer a la form suivante sans verif BDD";
+            // 
             // ConnexionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 221);
+            this.ClientSize = new System.Drawing.Size(469, 243);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btValidate);
             this.Controls.Add(this.pbPasswordError);
             this.Controls.Add(this.pbUsernameError);
@@ -148,6 +160,7 @@
         private System.Windows.Forms.PictureBox pbUsernameError;
         private System.Windows.Forms.PictureBox pbPasswordError;
         private System.Windows.Forms.Button btValidate;
+        private System.Windows.Forms.Label label1;
     }
 }
 

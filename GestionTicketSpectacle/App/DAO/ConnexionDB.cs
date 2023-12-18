@@ -6,28 +6,34 @@ namespace GestionTicketSpectacle.App.Classes
     public class ConnexionDB
     {
         private readonly string connectionString;
-        private SqlConnection connection;
+        public SqlConnection Connection { get; set; }
 
         public ConnexionDB()
         {
-            this.connectionString = "Data Source = MSI; Initial Catalog = TpGestionTicketSpectacle; User ID = test2; Password = root";
+            //Kelvin
+            //this.connectionString = "Data Source = MSI; Initial Catalog = TpGestionTicketSpectacle; User ID = test2; Password = root";
+
+            //Romain
+            this.connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=TpGestionTicketSpectacle;Integrated Security=True;User ID=Exarilo;";
+            this.Connection = this.OpenConnection();
+
         }
 
         public SqlConnection OpenConnection()
         {
             try
             {
-                if (connection == null)
+                if (Connection == null)
                 {
-                    connection = new SqlConnection(connectionString);
+                    Connection = new SqlConnection(connectionString);
                 }
 
-                if (connection.State != System.Data.ConnectionState.Open)
+                if (Connection.State != System.Data.ConnectionState.Open)
                 {
-                    connection.Open();
+                    Connection.Open();
                 }
 
-                return connection;
+                return Connection;
             }
             catch (Exception ex)
             {
@@ -40,9 +46,9 @@ namespace GestionTicketSpectacle.App.Classes
         {
             try
             {
-                if (connection != null && connection.State == System.Data.ConnectionState.Open)
+                if (Connection != null && Connection.State == System.Data.ConnectionState.Open)
                 {
-                    connection.Close();
+                    Connection.Close();
                 }
             }
             catch (Exception ex)

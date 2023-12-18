@@ -35,9 +35,10 @@ namespace GestionTicketSpectacle.App.Api_Rest
                             typeSpectable:TypeSpectable.Theatre,
                             iD : int.Parse(value[0]?.ToString()),
                             titre : value[1]?.ToString(),
-                            date : DateTime.Parse(value[3]?.ToString()),
+                            date : DateTime.Parse(value[4]?.ToString()),
+                            price: int.Parse(value[3]?.ToString()),
                             lieu : value[2]?.ToString(),
-                            nbPlace : int.Parse(value[4]?.ToString())
+                            nbPlace : int.Parse(value[5]?.ToString())
                         ));
                     }
                 }

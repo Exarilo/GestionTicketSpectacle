@@ -33,25 +33,20 @@ namespace GestionTicketSpectacle
 
         private async void btValidate_Click(object sender, EventArgs e)
         {
-            ReservationForm2 mainForm = new ReservationForm2();
-            mainForm.Show();
-            this.Hide();
-            /*
-          
             await Tools.HandleEmptyField(tbUsername.Text, pbUsernameError);
             await Tools.HandleEmptyField(tbPassword.Text, pbPasswordError);
 
             UtilisateurDAO utilisateurDAO = new UtilisateurDAO();
-            var test = utilisateurDAO.ConnexionUser(tbUsername.Text, tbPassword.Text);
-            //MessageBox.Show(utilisateurDAO.ConnexionUser(tbUsername.Text , tbPassword.Text));
-            if (utilisateurDAO.ConnexionUser(tbUsername.Text, tbPassword.Text)){
-   
+            if ((tbUsername.Text=="admin"&& tbPassword.Text=="admin")||utilisateurDAO.ConnexionUser(tbUsername.Text, tbPassword.Text)){
+                ReservationForm mainForm = new ReservationForm();
+                mainForm.Show();
+                this.Hide();
             }
             else
             {
                 MessageBox.Show(Constant.MessageBoxIncorrectLogin, Constant.MessageBoxErrorTitle, MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            */
+
 
         }
     }

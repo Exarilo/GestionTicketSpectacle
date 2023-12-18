@@ -1,13 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GestionTicketSpectacle.App.Classes
 {
     public class GestionnaireBillets
     {
-        public GestionnaireBillets() { }
+        private List<Billet> billets;
+
+        public GestionnaireBillets()
+        {
+
+        }
+        private void AddBillet(Billet billet)
+        {
+            if (billet != null)
+            {
+                billets.Add(billet);
+                billet.OnReservation += HandleReservation;
+                billet.OnCancellation += HandleCancellation;
+            }
+        }
+
+        private void DeleteBillet(Billet billet)
+        {
+            if (billets.Contains(billet))
+            {
+                billet.OnReservation -= HandleReservation;
+                billet.OnCancellation -= HandleCancellation;
+                billets.Remove(billet);
+            }
+        }
+
+        private void HandleReservation(int eventId, int userId)
+        {
+            
+        }
+
+        private void HandleCancellation(int ticketId)
+        {
+
+        }
     }
 }
