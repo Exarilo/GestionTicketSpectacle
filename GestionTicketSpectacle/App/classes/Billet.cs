@@ -9,7 +9,7 @@
         public event CancellationDelegate OnCancellation;
 
         private int IDSpectacle { get; set; }
-        private bool StatutReservation { get; set; }
+        private bool StatutReservation { get; set; } //actuellement 
 
         public Billet(int iDSpectacle, bool statutReservation)
         {
@@ -17,15 +17,8 @@
             StatutReservation = statutReservation;
         }
 
-        public void BuyBillet()
-        {
-            OnReservation?.Invoke(IDSpectacle);
-        }
+        public void BuyBillet()=> OnReservation?.Invoke(IDSpectacle);
+        public void CancelReservation(int ticketId) => OnCancellation?.Invoke(ticketId);
 
-        public void CancelReservation(int ticketId)
-        {
-            OnCancellation?.Invoke(ticketId);
-        }
     }
-
 }

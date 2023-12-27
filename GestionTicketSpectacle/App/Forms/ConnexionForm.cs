@@ -1,5 +1,4 @@
 ﻿using GestionTicketSpectacle.App;
-using GestionTicketSpectacle.App.Api_Rest;
 using GestionTicketSpectacle.App.DAO;
 using GestionTicketSpectacle.App.Forms;
 using System;
@@ -37,7 +36,7 @@ namespace GestionTicketSpectacle
             await Tools.HandleEmptyField(tbPassword.Text, pbPasswordError);
 
             UtilisateurDAO utilisateurDAO = new UtilisateurDAO();
-            if ((tbUsername.Text=="admin"&& tbPassword.Text=="admin")||utilisateurDAO.ConnexionUser(tbUsername.Text, tbPassword.Text)){
+            if ((tbUsername.Text==Constant.DefaultConnexionUsername&& tbPassword.Text== Constant.DefaultConnexionPassword) ||utilisateurDAO.ConnexionUser(tbUsername.Text, tbPassword.Text)){
                 ReservationForm mainForm = new ReservationForm(tbUsername.Text);
                 mainForm.Show();
                 this.Hide();

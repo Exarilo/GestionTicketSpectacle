@@ -10,6 +10,7 @@ namespace GestionTicketSpectacle.App.Api_Rest
 {
     public class APIManager
     {
+        //cette api ne devrai pas exister les spectacles devraient se baser sur la BDD
         public async Task<List<Spectacle>> GetSpectacles()
         {
             var client = new HttpClient();

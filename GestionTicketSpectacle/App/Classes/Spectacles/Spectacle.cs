@@ -1,6 +1,5 @@
 ﻿using GestionTicketSpectacle.App.Classes.Spectacles;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;

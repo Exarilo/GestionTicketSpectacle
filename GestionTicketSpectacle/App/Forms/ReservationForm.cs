@@ -107,7 +107,17 @@ namespace GestionTicketSpectacle.App.Forms
                         .AddText($"Payement de {totalSelectedPrice} € confirmé")
                         .AddAppLogoOverride(new Uri($"file:///{tempImagePath}"), ToastGenericAppLogoCrop.Circle)
                         .Show();
+       
+                    //doit etre optimisé pas normal d'avoir 2 fois la boucle sur lbInventory
+                    //methode trop grande pourrait etre splitté en plusieurs parties.
+                    for (int i = 0; i < lbInventory.Items.Count; i++)
+                    {
+                        if (lbInventory.GetItemChecked(i))
+                            lbHistory.Items.Add(lbInventory.Items[i].ToString());
+                        lbHistoryPrice.Text = $"{totalSelectedPrice} €"; // devrait faire une addition avec le prix actuel actuellement ca reinitialise
+                    }
                     RemoveCheckedItems(lbInventory);
+
                 }
             }
         }

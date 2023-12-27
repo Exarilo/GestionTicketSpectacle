@@ -50,9 +50,9 @@
             this.lb = new System.Windows.Forms.Label();
             this.btPay = new System.Windows.Forms.Button();
             this.tabHistorical = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbHistoryPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbHistory = new System.Windows.Forms.ListBox();
             this.panel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -267,9 +267,9 @@
             // 
             // tabHistorical
             // 
-            this.tabHistorical.Controls.Add(this.label3);
+            this.tabHistorical.Controls.Add(this.lbHistoryPrice);
             this.tabHistorical.Controls.Add(this.label2);
-            this.tabHistorical.Controls.Add(this.listBox1);
+            this.tabHistorical.Controls.Add(this.lbHistory);
             this.tabHistorical.Location = new System.Drawing.Point(4, 25);
             this.tabHistorical.Name = "tabHistorical";
             this.tabHistorical.Size = new System.Drawing.Size(873, 319);
@@ -277,14 +277,14 @@
             this.tabHistorical.Text = "Historique";
             this.tabHistorical.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // lbHistoryPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 229);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "0€ ";
+            this.lbHistoryPrice.AutoSize = true;
+            this.lbHistoryPrice.Location = new System.Drawing.Point(96, 229);
+            this.lbHistoryPrice.Name = "lbHistoryPrice";
+            this.lbHistoryPrice.Size = new System.Drawing.Size(24, 16);
+            this.lbHistoryPrice.TabIndex = 2;
+            this.lbHistoryPrice.Text = "0€ ";
             // 
             // label2
             // 
@@ -295,14 +295,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Prix total : ";
             // 
-            // listBox1
+            // lbHistory
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(27, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(722, 196);
-            this.listBox1.TabIndex = 0;
+            this.lbHistory.FormattingEnabled = true;
+            this.lbHistory.ItemHeight = 16;
+            this.lbHistory.Location = new System.Drawing.Point(27, 19);
+            this.lbHistory.Name = "lbHistory";
+            this.lbHistory.Size = new System.Drawing.Size(722, 196);
+            this.lbHistory.TabIndex = 0;
             // 
             // panel
             // 
@@ -354,9 +354,9 @@
         private System.Windows.Forms.TabPage tabShop;
         private System.Windows.Forms.TabPage tabHistorical;
         private System.Windows.Forms.Button btPay;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbHistoryPrice;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbHistory;
         private System.Windows.Forms.DataGridView dgvSelection;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridViewImageColumn colIcon;

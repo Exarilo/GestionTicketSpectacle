@@ -36,7 +36,7 @@ namespace GestionTicketSpectacle.App.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error checking user existence: {ex.Message}");
+                Console.WriteLine(Constant.ConsoleUserNotFound + ex.Message);
                 return false;
             }
         }

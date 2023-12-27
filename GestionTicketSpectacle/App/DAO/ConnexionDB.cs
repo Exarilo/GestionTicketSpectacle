@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace GestionTicketSpectacle.App.Classes
 {
@@ -10,11 +11,7 @@ namespace GestionTicketSpectacle.App.Classes
 
         public ConnexionDB()
         {
-            //Kelvin
-            //this.connectionString = "Data Source = MSI; Initial Catalog = TpGestionTicketSpectacle; User ID = test2; Password = root";
-
-            //Romain
-            this.connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=TpGestionTicketSpectacle;Integrated Security=True;User ID=Exarilo;";
+            this.connectionString =Constant.BDD_RomainConnectionString;
             this.Connection = this.OpenConnection();
 
         }
@@ -37,7 +34,7 @@ namespace GestionTicketSpectacle.App.Classes
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error opening database connection: {ex.Message}");
+                MessageBox.Show(Constant.MessageBoxErrorOpeningConnection+ ex.Message);
                 return null;
             }
         }
@@ -47,13 +44,11 @@ namespace GestionTicketSpectacle.App.Classes
             try
             {
                 if (Connection != null && Connection.State == System.Data.ConnectionState.Open)
-                {
                     Connection.Close();
-                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error closing database connection: {ex.Message}");
+                MessageBox.Show(Constant.MessageBoxErrorClosingConnection + ex.Message);
             }
         }
     }

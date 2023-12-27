@@ -2,18 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GestionTicketSpectacle.App.Classes.Spectacles
 {
     public static class SpectacleExtension
     {
-        private static Bitmap GetConcertIcon() => Resources.concert;
-        private static Bitmap GetTheatreIcon() => Resources.theatre;
-        private static Bitmap GetSportIcon() => Resources.sport;
-
         public static Bitmap GetAssociatedBitmap(this TypeSpectable typeSpectable)
         {
             switch (typeSpectable)
@@ -26,7 +19,7 @@ namespace GestionTicketSpectacle.App.Classes.Spectacles
                     return TypeSpectacle.GetSportIcon();
 
                 default:
-                    throw new Exception("Un type de spectacle doit avoir uen icone qui lui ait associé");
+                    throw new Exception(Constant.ExceptionEventWithoutIcon);
             }
         }
     }

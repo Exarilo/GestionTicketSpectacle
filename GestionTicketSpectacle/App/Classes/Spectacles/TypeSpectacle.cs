@@ -1,6 +1,5 @@
 ﻿using GestionTicketSpectacle.Properties;
 using System.Drawing;
-using System.Windows.Forms;
 
 namespace GestionTicketSpectacle.App.Classes
 {
@@ -20,7 +19,7 @@ namespace GestionTicketSpectacle.App.Classes
                 case "Sport":
                     return TypeSpectable.Sport;
                 default:
-                    throw new System.Exception("This event type doesn't exist");
+                    throw new System.Exception(Constant.ExceptionUnsuportedEvent);
             }
         } 
     }
