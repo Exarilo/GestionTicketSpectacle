@@ -1,7 +1,5 @@
 ﻿using GestionTicketSpectacle.App.Classes;
 using System;
-using System.Collections.ObjectModel;
-using System.Data.Common;
 using System.Data.SqlClient;
 
 namespace GestionTicketSpectacle.App.DAO
@@ -30,13 +28,9 @@ namespace GestionTicketSpectacle.App.DAO
                     int userCount = (int)command.ExecuteScalar();
 
                     if (userCount > 0)
-                    {
                         return true;
-                    }
                     else
-                    {
                         return false;
-                    }
                 }
 
             }

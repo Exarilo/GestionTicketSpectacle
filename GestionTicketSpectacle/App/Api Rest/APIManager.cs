@@ -32,13 +32,13 @@ namespace GestionTicketSpectacle.App.Api_Rest
                     {
                         spectacles.Add(new Spectacle
                         (
-                            typeSpectable:TypeSpectable.Theatre,
-                            iD : int.Parse(value[0]?.ToString()),
-                            titre : value[1]?.ToString(),
-                            date : DateTime.Parse(value[4]?.ToString()),
-                            price: int.Parse(value[3]?.ToString()),
-                            lieu : value[2]?.ToString(),
-                            nbPlace : int.Parse(value[5]?.ToString())
+                            typeSpectable: TypeSpectacle.GetTypeSpectacleFromString(value[0]?.ToString()),
+                            iD : int.Parse(value[1]?.ToString()),
+                            titre : value[2]?.ToString(),
+                            date : DateTime.Parse(value[5]?.ToString()),
+                            price: int.Parse(value[4]?.ToString()),
+                            lieu : value[3]?.ToString(),
+                            nbPlace : int.Parse(value[6]?.ToString())
                         ));
                     }
                 }

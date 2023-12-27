@@ -2,29 +2,27 @@
 {
     public class Billet
     {
-        public delegate void ReservationDelegate(int eventId, int userId);
+        public delegate void ReservationDelegate(int eventId);
         public delegate void CancellationDelegate(int ticketId);
 
         public event ReservationDelegate OnReservation;
         public event CancellationDelegate OnCancellation;
 
         private int IDSpectacle { get; set; }
-        private int IDUtilisateur { get; set; }
         private bool StatutReservation { get; set; }
 
-        public Billet(int iDSpectacle, int iDUtilisateur, bool statutReservation)
+        public Billet(int iDSpectacle, bool statutReservation)
         {
             IDSpectacle = iDSpectacle;
-            IDUtilisateur = iDUtilisateur;
             StatutReservation = statutReservation;
         }
 
-        public void EffectuerReservation()
+        public void BuyBillet()
         {
-            OnReservation?.Invoke(IDSpectacle, IDUtilisateur);
+            OnReservation?.Invoke(IDSpectacle);
         }
 
-        public void EffectuerAnnulation(int ticketId)
+        public void CancelReservation(int ticketId)
         {
             OnCancellation?.Invoke(ticketId);
         }

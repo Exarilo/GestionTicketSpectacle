@@ -38,7 +38,7 @@ namespace GestionTicketSpectacle
 
             UtilisateurDAO utilisateurDAO = new UtilisateurDAO();
             if ((tbUsername.Text=="admin"&& tbPassword.Text=="admin")||utilisateurDAO.ConnexionUser(tbUsername.Text, tbPassword.Text)){
-                ReservationForm mainForm = new ReservationForm();
+                ReservationForm mainForm = new ReservationForm(tbUsername.Text);
                 mainForm.Show();
                 this.Hide();
             }

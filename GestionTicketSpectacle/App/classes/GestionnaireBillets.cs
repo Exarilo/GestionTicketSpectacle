@@ -9,9 +9,9 @@ namespace GestionTicketSpectacle.App.Classes
 
         public GestionnaireBillets()
         {
-
+            billets = new List<Billet>();
         }
-        private void AddBillet(Billet billet)
+        public void AddBillet(Billet billet)
         {
             if (billet != null)
             {
@@ -21,7 +21,15 @@ namespace GestionTicketSpectacle.App.Classes
             }
         }
 
-        private void DeleteBillet(Billet billet)
+        public void AddRange(IEnumerable<Billet> newBillets)
+        {
+            foreach (var billet in newBillets)
+            {
+                AddBillet(billet);
+            }
+        }
+
+        public void DeleteBillet(Billet billet)
         {
             if (billets.Contains(billet))
             {
@@ -31,7 +39,7 @@ namespace GestionTicketSpectacle.App.Classes
             }
         }
 
-        private void HandleReservation(int eventId, int userId)
+        private void HandleReservation(int eventId)
         {
             
         }
